@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moveintra.in/sitemap.xml
