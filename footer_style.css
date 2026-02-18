@@ -1,0 +1,111 @@
+/* Footer Customizations */
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+/* Section Title - Gradient */
+.footer .section-title,
+.footer-logo-text {
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #EB7300, #ffc480, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    display: inline-block;
+}
+
+/* Ensure links turn primary color (orange) on hover */
+.footer-links a:hover {
+    color: var(--primary-color) !important;
+    padding-left: 5px;
+    /* Subtle movement on hover */
+}
+
+/* Link Styling per user request: 14px, 300 weight */
+.footer-links li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-links a {
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* List Icon (The pointer) */
+.footer-list-icon {
+    color: var(--primary-color);
+    font-size: 14px;
+    margin-top: 3px;
+    /* Align with text */
+}
+
+/* Social Icons - Modern Glassmorphism */
+.social-icon-circle {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.05);
+    /* Glassy background */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1 !important;
+    /* Soft white icon */
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy transition */
+    font-size: 1.2rem;
+}
+
+/* Hover Effects - Brand Colors with Glow */
+.social-fb:hover {
+    background-color: #1877F2 !important;
+    border-color: #1877F2;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.6);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-tw:hover {
+    background-color: #1DA1F2 !important;
+    border-color: #1DA1F2;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(29, 161, 242, 0.6);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-insta:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    border-color: transparent;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(220, 39, 67, 0.6);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-yt:hover {
+    background-color: #FF0000 !important;
+    border-color: #FF0000;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-li:hover {
+    background-color: #0077B5 !important;
+    border-color: #0077B5;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(0, 119, 181, 0.6);
+    transform: translateY(-5px) scale(1.1);
+}

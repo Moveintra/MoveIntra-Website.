@@ -1,0 +1,320 @@
+/* High-End Process Animation */
+.process-scene {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(to bottom, #f0f9ff 0%, #cbebff 100%);
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Moving Background Elements */
+.scrolling-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    z-index: 0;
+}
+
+.clouds {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://raw.githubusercontent.com/animated-icons/animated-icons/master/clouds.svg') repeat-x;
+    /* Placeholder or CSS clouds */
+    opacity: 0.5;
+    animation: scrollBg 60s linear infinite;
+}
+
+.city-silhouette {
+    position: absolute;
+    bottom: 60px;
+    /* Above road */
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: repeating-linear-gradient(90deg,
+            #cbd5e1 0px, #cbd5e1 40px,
+            transparent 40px, transparent 80px,
+            #94a3b8 80px, #94a3b8 100px,
+            transparent 100px, transparent 150px);
+    opacity: 0.3;
+    animation: scrollBg 30s linear infinite;
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #475569;
+    z-index: 1;
+}
+
+.road-stripe {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 200%;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, #fff 0, #fff 40px, transparent 40px, transparent 80px);
+    transform: translateY(-50%);
+    animation: scrollRoad 2s linear infinite;
+}
+
+/* Stations */
+.station-container {
+    position: absolute;
+    bottom: 30px;
+    /* On road */
+    z-index: 2;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.station-icon-box {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    position: relative;
+    border: 2px solid #fff;
+}
+
+/* Active State for Stations */
+.station-active .station-icon-box {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 25px rgba(235, 115, 0, 0.4);
+}
+
+.st-warehouse {
+    left: 10%;
+}
+
+.st-tracking {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.st-delivery {
+    right: 10%;
+}
+
+/* Advanced Moving Truck */
+.adv-truck-wrapper {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    z-index: 3;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
+    animation: advancedTruckRoute 10s linear infinite;
+}
+
+.adv-truck-body {
+    width: 120px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adv-truck-cab {
+    position: absolute;
+    right: -35px;
+    bottom: 0;
+    width: 40px;
+    height: 50px;
+    background: #0f172a;
+    border-radius: 0 10px 10px 0;
+}
+
+.adv-truck-window {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 15px;
+    background: #94a3b8;
+    border-radius: 0 5px 0 0;
+}
+
+.adv-wheel {
+    position: absolute;
+    bottom: -10px;
+    width: 22px;
+    height: 22px;
+    background: #333;
+    border: 2px solid #555;
+    border-radius: 50%;
+    animation: spinWheel 0.5s linear infinite;
+}
+
+.w-1 {
+    left: 15px;
+}
+
+.w-2 {
+    left: 80px;
+}
+
+.w-3 {
+    right: -25px;
+}
+
+/* Phone Animation */
+.phone-mockup {
+    width: 100px;
+    height: 160px;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 4px solid #334155;
+    position: absolute;
+    top: -100px;
+    /* Above notification */
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    z-index: 10;
+    overflow: hidden;
+    animation: phonePopUp 10s linear infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.phone-screen {
+    width: 90%;
+    height: 80%;
+    background: #f8fafc;
+    border-radius: 4px;
+    position: relative;
+}
+
+.map-path-y {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    height: 80%;
+    width: 2px;
+    background: #cbd5e1;
+    transform: translateX(-50%);
+}
+
+.map-marker-y {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-color);
+    font-size: 1rem;
+    animation: mapMarkerMove 2s linear infinite;
+}
+
+/* Animations */
+@keyframes scrollBg {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRoad {
+    0% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(-40px);
+    }
+}
+
+@keyframes spinWheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes advancedTruckRoute {
+    0% {
+        left: -150px;
+    }
+
+    40% {
+        left: 45%;
+    }
+
+    /* Arrive center */
+    50% {
+        left: 45%;
+    }
+
+    /* Pause */
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes phonePopUp {
+
+    0%,
+    35% {
+        transform: translateX(-50%) scale(0);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateX(-50%) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes mapMarkerMove {
+    0% {
+        top: 10%;
+    }
+
+    100% {
+        top: 80%;
+    }
+}

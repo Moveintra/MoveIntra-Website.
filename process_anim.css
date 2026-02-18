@@ -1,0 +1,256 @@
+/* Process Animation Styles */
+.process-anim-container {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+    background: #f8f9fa;
+    /* Light background */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.process-track {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+/* Stage Elements */
+.process-stage {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.stage-icon {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.process-stage:hover .stage-icon {
+    transform: translateY(-5px);
+    color: #fff;
+    background: var(--primary-color);
+}
+
+.stage-label {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Connecting Path */
+.connection-path {
+    position: absolute;
+    top: 50%;
+    /* Adjusted to align with icons */
+    left: 100px;
+    right: 100px;
+    height: 4px;
+    background: #e2e8f0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.path-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--primary-color);
+    animation: fillPath 8s linear infinite;
+}
+
+/* Moving Elements */
+.moving-truck {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    z-index: 3;
+    filter: drop-shadow(0 5px 10px rgba(235, 115, 0, 0.3));
+    animation: truckMove 8s linear infinite;
+}
+
+.moving-package {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #FFD700;
+    border: 2px solid #DAA520;
+    border-radius: 4px;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    animation: packageMove 8s linear infinite;
+    opacity: 0;
+}
+
+/* Tablet Animation */
+.tablet-screen {
+    width: 140px;
+    height: 180px;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 4px solid #334155;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.map-route {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    border-left: 2px dashed #4ade80;
+    border-bottom: 2px dashed #4ade80;
+}
+
+.map-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: mapDotMove 2s linear infinite;
+}
+
+/* Animations */
+@keyframes truckMove {
+    0% {
+        left: 10%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    30% {
+        left: 35%;
+    }
+
+    /* Arrive at Tablet */
+    45% {
+        left: 35%;
+    }
+
+    /* Wait at Tablet */
+    70% {
+        left: 60%;
+    }
+
+    /* Arrive at Delivery */
+    85% {
+        left: 90%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        left: 95%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+@keyframes fillPath {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes packageMove {
+
+    0%,
+    30% {
+        opacity: 0;
+        left: 10%;
+    }
+
+    31% {
+        opacity: 1;
+        left: 35%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    /* Appears at tablet */
+    35% {
+        transform: translate(-50%, -60px) scale(1.2);
+    }
+
+    /* Pops up */
+    40% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    45% {
+        left: 35%;
+    }
+
+    70% {
+        left: 60%;
+    }
+
+    /* Delivery Point */
+    75% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translate(-50%, 20px) scale(0.5);
+    }
+
+    /* Dropped */
+    100% {
+        opacity: 0;
+        left: 90%;
+    }
+}
+
+@keyframes mapDotMove {
+    0% {
+        top: 20%;
+        left: 20%;
+    }
+
+    50% {
+        top: 80%;
+        left: 20%;
+    }
+
+    100% {
+        top: 80%;
+        left: 80%;
+    }
+}

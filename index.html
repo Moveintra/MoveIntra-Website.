@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveIntra Logistics | Ship Smarter</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Outfit & Poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer_style.css">
+    <link rel="stylesheet" href="cta_style.css">
+    <link rel="stylesheet" href="logistics_anim.css">
+    <link rel="stylesheet" href="process_anim.css">
+    <link rel="stylesheet" href="process_adv_anim.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fixed-top glass-navbar">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">
+                    <i class="fas fa-shipping-fast text-primary"></i> MoveIntra
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tracking">Tracking</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <div class="auth-buttons d-flex gap-2 mt-3 mt-lg-0">
+                                <a href="login.html" class="btn btn-outline-primary px-4">Login</a>
+                                <a href="signup.html" class="btn btn-primary px-4">Sign Up</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content text-center text-lg-start">
+                    <h1 class="display-3 fw-bold mb-4">Ship <span class="text-gradient">Smarter, Faster</span> & Cheaper
+                    </h1>
+                    <p class="lead mb-5">India's leading logistics aggregator. Simpler shipping for growing businesses.
+                        Manage everything from one dashboard.</p>
+                    <div
+                        class="hero-cta d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="signup.html" class="btn btn-primary btn-lg px-5 py-3 shadow-lg">Get Started Free <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3">Explore Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-img-wrapper position-relative">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Logistics Illustration" class="img-fluid rounded-4 shadow-2xl">
+                        <div class="glass-float-card card-1 shadow">
+                            <i class="fas fa-box-open text-primary mb-2 d-block fs-3"></i>
+                            <span class="fw-bold">50k+</span>
+                            <small class="d-block text-muted">Daily Shipments</small>
+                        </div>
+                        <div class="glass-float-card card-2 shadow">
+                            <i class="fas fa-truck text-secondary mb-2 d-block fs-3"></i>
+                            <span class="fw-bold">29k+</span>
+                            <small class="d-block text-muted">Serviceable Pincodes</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section (Scrolling Marquee) -->
+    <section class="partners py-5 overflow-hidden border-top border-bottom border-secondary border-opacity-10">
+        <div class="container-fluid px-0">
+            <h3 class="text-center text-muted small text-uppercase mb-5" style="letter-spacing: 2px;">Trusted by Top
+                Courier Partners</h3>
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- Set 1 -->
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/delhivery.com'); --brand-color: #000000;">
+                        <span>Delhivery</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/bluedart.com'); --brand-color: #0055a5;">
+                        <span>Blue Dart</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/dtdc.in'); --brand-color: #003399;">
+                        <span>DTDC</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/aramex.com'); --brand-color: #e01933;">
+                        <span>Aramex</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/xpressbees.com'); --brand-color: #f48120;">
+                        <span>XpressBees</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/shadowfax.in'); --brand-color: #f26522;">
+                        <span>Shadowfax</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/ekartlogistics.com'); --brand-color: #2874f0;">
+                        <span>Ekart</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/blitz.delivery'); --brand-color: #000000;">
+                        <span>Blitz</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/dotzot.in'); --brand-color: #3b568d;">
+                        <span>DotZot</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/kerryindev.com'); --brand-color: #004098;">
+                        <span>Kerry Indev</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/ship.amazon.in'); --brand-color: #000000;">
+                        <span>Amazon Shipping</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/loadshare.net'); --brand-color: #4a69bd;">
+                        <span>Loadshare</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/tpcindia.com'); --brand-color: #0054a6;">
+                        <span>Professional</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/rapidcourier.in'); --brand-color: #ed1c24;">
+                        <span>Rapid</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/tciexpress.in'); --brand-color: #004a99;">
+                        <span>TCI Express</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/dpworld.com'); --brand-color: #003d7c;">
+                        <span>DP World</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/acplcargo.com'); --brand-color: #e30613;">
+                        <span>ACPL</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/omlogistics.co.in'); --brand-color: #0d4ea2;">
+                        <span>Om Logistics</span>
+                    </div>
+
+                    <!-- Duplicate for Seamless Loop -->
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/delhivery.com'); --brand-color: #000000;">
+                        <span>Delhivery</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/bluedart.com'); --brand-color: #0055a5;">
+                        <span>Blue Dart</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/dtdc.in'); --brand-color: #003399;">
+                        <span>DTDC</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/aramex.com'); --brand-color: #e01933;">
+                        <span>Aramex</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/xpressbees.com'); --brand-color: #f48120;">
+                        <span>XpressBees</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/shadowfax.in'); --brand-color: #f26522;">
+                        <span>Shadowfax</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/ekartlogistics.com'); --brand-color: #2874f0;">
+                        <span>Ekart</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/blitz.delivery'); --brand-color: #000000;">
+                        <span>Blitz</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/dotzot.in'); --brand-color: #3b568d;">
+                        <span>DotZot</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/kerryindev.com'); --brand-color: #004098;">
+                        <span>Kerry Indev</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/ship.amazon.in'); --brand-color: #000000;">
+                        <span>Amazon Shipping</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/loadshare.net'); --brand-color: #4a69bd;">
+                        <span>Loadshare</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/tpcindia.com'); --brand-color: #0054a6;">
+                        <span>Professional</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/rapidcourier.in'); --brand-color: #ed1c24;">
+                        <span>Rapid</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/tciexpress.in'); --brand-color: #004a99;">
+                        <span>TCI Express</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/dpworld.com'); --brand-color: #003d7c;">
+                        <span>DP World</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/acplcargo.com'); --brand-color: #e30613;">
+                        <span>ACPL</span>
+                    </div>
+                    <div class="partner-logo-box"
+                        style="--bg-logo: url('https://logo.clearbit.com/omlogistics.co.in'); --brand-color: #0d4ea2;">
+                        <span>Om Logistics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <!-- Features Section -->
+    <section class="features py-5" id="services">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <span class="badge bg-soft-primary px-3 py-2 rounded-pill text-primary mb-3">Our Services</span>
+                <h2 class="display-5 fw-bold text-dark">Why Choose MoveIntra?</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">We simplify shipping with cutting-edge
+                    technology and a vast network of courier partners across India.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100 shadow-sm border-0 glass-card">
+                        <div class="icon-wrapper mb-4 text-primary fs-1">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="h4 fw-bold">Fast Delivery</h3>
+                        <p class="text-muted mb-0">We partner with the fastest courier services to ensure your shipments
+                            reach on time, every time.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100 shadow-sm border-0 glass-card">
+                        <div class="icon-wrapper mb-4 text-secondary fs-1">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h3 class="h4 fw-bold">Lowest Rates</h3>
+                        <p class="text-muted mb-0">Get the most competitive shipping rates in the market with our
+                            carrier comparison engine.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100 shadow-sm border-0 glass-card">
+                        <div class="icon-wrapper mb-4 text-primary fs-1">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 class="h4 fw-bold">Real-time Tracking</h3>
+                        <p class="text-muted mb-0">Track your shipments in real-time from pickup to delivery with our
+                            advanced tracking system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics Process Section -->
+    <section class="logistics-process py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <span class="badge bg-soft-primary px-3 py-2 rounded-pill text-primary mb-3">How We Work</span>
+                        <h2 class="display-5 fw-bold text-dark">Seamless End-to-End Journey</h2>
+                    </div>
+
+                    <!-- Animated Process Flow (Restored) -->
+                    <div class="process-anim-container bg-white position-relative py-5">
+
+                        <!-- Connection Path -->
+                        <div class="position-absolute top-50 start-0 w-100 translate-middle-y"
+                            style="height: 4px; background: #e2e8f0; z-index: 1;"></div>
+                        <div class="position-absolute top-50 start-0 h-100 bg-primary opacity-25"
+                            style="width: 0%; height: 4px; z-index: 1; animation: fillPath 8s linear infinite;"></div>
+
+                        <div class="container position-relative" style="z-index: 2;">
+                            <div class="row align-items-center text-center">
+
+                                <!-- Step 1: Warehouse -->
+                                <div class="col-4">
+                                    <div
+                                        class="d-inline-block bg-white p-4 rounded-circle shadow-lg mb-3 position-relative">
+                                        <i class="fas fa-warehouse text-primary fa-3x"></i>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">1</span>
+                                    </div>
+                                    <h5 class="fw-bold" style="color: #081E3D !important;">Warehouse</h5>
+                                    <p class="small mb-0" style="color: #EB7300 !important; font-weight: 600;">Order
+                                        Packed</p>
+                                </div>
+
+                                <!-- Step 2: Transit / Tracking -->
+                                <div class="col-4">
+                                    <div class="d-inline-block bg-white p-4 rounded-4 shadow-lg mb-3 position-relative video-feed-effect"
+                                        style="border: 3px solid #334155;">
+                                        <div class="overflow-hidden position-relative"
+                                            style="width: 120px; height: 160px; background: #f1f5f9;">
+                                            <!-- Animated Map inside Phone -->
+                                            <div class="position-absolute w-100 h-100"
+                                                style="background: url('https://a.tile.openstreetmap.org/15/9826/13357.png'); background-repeat: repeat; opacity: 0.6; animation: mapScroll 15s linear infinite;">
+                                            </div>
+                                            <i class="fas fa-map-marker-alt text-danger position-absolute"
+                                                style="top: 30%; left: 40%; animation: pulsePin 1s infinite;"></i>
+                                            <div class="position-absolute bottom-0 w-100 bg-dark text-white p-2 small">
+                                                <i class="fas fa-truck text-warning me-1"></i> Arriving...
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="fw-bold" style="color: #081E3D !important;">Smart Tracking</h5>
+                                    <p class="small mb-0" style="color: #EB7300 !important; font-weight: 600;">Real-time
+                                        Updates</p>
+                                </div>
+
+                                <!-- Step 3: Delivery -->
+                                <div class="col-4">
+                                    <div
+                                        class="d-inline-block bg-white p-4 rounded-circle shadow-lg mb-3 position-relative">
+                                        <i class="fas fa-home text-success fa-3x"></i>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"><i
+                                                class="fas fa-check"></i></span>
+                                    </div>
+                                    <h5 class="fw-bold" style="color: #081E3D !important;">Doorstep Delivery</h5>
+                                    <p class="small mb-0" style="color: #EB7300 !important; font-weight: 600;">Safe &
+                                        Secure</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Moving Elements -->
+                        <div class="position-absolute top-50 start-0 translate-middle-y"
+                            style="left: 15%; animation: truckMoveCustom 8s linear infinite; z-index: 3;">
+                            <i class="fas fa-truck-moving text-primary fa-3x filter-shadow"></i>
+                        </div>
+
+                        <div class="position-absolute top-50 start-0 translate-middle-y"
+                            style="left: 18%; animation: packageMoveCustom 8s linear infinite; z-index: 4;">
+                            <i class="fas fa-box text-warning fa-lg"></i>
+                        </div>
+
+                        <style>
+                            @keyframes mapScroll {
+                                0% {
+                                    background-position: 0% 0%;
+                                }
+
+                                100% {
+                                    background-position: 100% 100%;
+                                }
+                            }
+
+                            @keyframes truckMoveCustom {
+                                0% {
+                                    left: 10%;
+                                    opacity: 0;
+                                    transform: scale(0.5);
+                                }
+
+                                10% {
+                                    opacity: 1;
+                                    transform: scale(1);
+                                }
+
+                                35% {
+                                    left: 40%;
+                                }
+
+                                /* Pause at phone */
+                                45% {
+                                    left: 45%;
+                                }
+
+                                70% {
+                                    left: 80%;
+                                    opacity: 1;
+                                    transform: scale(1);
+                                }
+
+                                80% {
+                                    left: 85%;
+                                    opacity: 0;
+                                    transform: scale(0.5);
+                                }
+
+                                100% {
+                                    left: 90%;
+                                    opacity: 0;
+                                }
+                            }
+
+                            @keyframes packageMoveCustom {
+                                0% {
+                                    left: 10%;
+                                    opacity: 0;
+                                }
+
+                                35% {
+                                    left: 42%;
+                                    opacity: 0;
+                                }
+
+                                40% {
+                                    left: 42%;
+                                    opacity: 1;
+                                    transform: translateY(-30px) scale(1.5);
+                                }
+
+                                /* Pop out at phone */
+                                45% {
+                                    left: 42%;
+                                    opacity: 1;
+                                    transform: translateY(0) scale(1);
+                                }
+
+                                70% {
+                                    left: 80%;
+                                }
+
+                                80% {
+                                    opacity: 0;
+                                }
+
+                                100% {
+                                    opacity: 0;
+                                }
+                            }
+                        </style>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Interactive Orbit Features Section -->
+    <section class="orbit-section py-5 position-relative">
+        <div class="container py-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
+                    <span class="badge bg-soft-primary px-3 py-2 rounded-pill mb-3">Unique Capabilities</span>
+                    <h2 class="display-5 fw-bold text-dark mb-4">A Logistics Ecosystem <br><span
+                            class="text-primary">Designed for Excellence</span></h2>
+                    <p class="lead text-muted mb-5">We've built more than a shipping tool. Explore our core pillars that
+                        empower thousands of businesses across the nation.</p>
+
+                    <div class="feature-info-box d-none d-lg-block">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-circle bg-soft-primary text-primary rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 45px; height: 45px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="mb-0 fw-semibold text-dark">29,000+ Pincodes Covered</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-circle bg-soft-primary text-primary rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 45px; height: 45px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="mb-0 fw-semibold text-dark">Real-time Reattempt Intelligence</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="icon-circle bg-soft-primary text-primary rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 45px; height: 45px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="mb-0 fw-semibold text-dark">One Dedicated Growth Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="orbit-wrapper">
+                        <!-- Central Hub -->
+                        <div class="orbit-center">
+                            <i class="fas fa-crosshairs mb-3"></i>
+                            <div class="hub-slider">
+                                <div class="hub-slide">
+                                    <h4 class="fw-bold text-dark mb-1">Growth Hub</h4>
+                                    <p class="small text-muted mb-0">Centralized Logistics <br> Command Centre</p>
+                                </div>
+                                <div class="hub-slide">
+                                    <h4 class="fw-bold text-dark mb-1">Smart Engine</h4>
+                                    <p class="small text-muted mb-0">Optimized Routing <br> & AI Tracking</p>
+                                </div>
+                                <div class="hub-slide">
+                                    <h4 class="fw-bold text-dark mb-1">Global Scale</h4>
+                                    <p class="small text-muted mb-0">Expansive Reach <br> Without Borders</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Orbital Path & Items -->
+                        <div class="orbit-path">
+                            <!-- Nationwide Reach -->
+                            <div class="orbiting-item item-1" data-label="Nationwide Reach (29k+ Pincodes)">
+                                <div class="orbiting-content">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span class="mobile-label">Nationwide Reach</span>
+                                </div>
+                            </div>
+                            <!-- Delivery Follow-ups -->
+                            <div class="orbiting-item item-2" data-label="Smart Reattempt Mgmt">
+                                <div class="orbiting-content">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <span class="mobile-label">Delivery Follow-Ups</span>
+                                </div>
+                            </div>
+                            <!-- Logistics Network -->
+                            <div class="orbiting-item item-3" data-label="Multi-Carrier Network">
+                                <div class="orbiting-content">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span class="mobile-label">Logistics Network</span>
+                                </div>
+                            </div>
+                            <!-- Key Account Manager -->
+                            <div class="orbiting-item item-4" data-label="Dedicated Account Mgr">
+                                <div class="orbiting-content">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span class="mobile-label">Key Account Manager</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Grid (Visible only on small screens via CSS) -->
+                        <div class="orbiting-grid d-md-none">
+                            <!-- Items will be displayed here as cards via CSS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Partner Section -->
+    <section class="growth-section py-5">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <span class="badge bg-soft-primary px-3 py-2 rounded-pill mb-3">Partnering for Success</span>
+                <h2 class="display-5 fw-bold">Why Choose MoveIntra as Your Growth Partner?</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Box 1 -->
+                <div class="col-lg-6">
+                    <div class="growth-card">
+                        <span class="badge bg-soft-primary mb-3">Strategic Partner</span>
+                        <h3 class="h4 fw-bold mb-3 text-dark">MoveIntra — Powering Your eCommerce Growth</h3>
+                        <p class="text-muted mb-0">MoveIntra is more than a logistics aggregator — we are your partner
+                            in building a scalable and efficient eCommerce operation. Our technology and logistics
+                            network simplify shipping, improve operational efficiency, and support your business at
+                            every stage. From seamless order fulfillment and reliable transportation to smarter process
+                            management, we help you focus on growing your brand while we handle the complexities behind
+                            the scenes.</p>
+                    </div>
+                </div>
+                <!-- Box 2 -->
+                <div class="col-lg-6">
+                    <div class="growth-card">
+                        <span class="badge bg-soft-primary mb-3">Operational Excellence</span>
+                        <h3 class="h4 fw-bold mb-3 text-dark">Enabling Seamless Scale</h3>
+                        <p class="text-muted mb-0">We go beyond shipping. MoveIntra combines smart logistics, reliable
+                            transport solutions, and operational support to help businesses scale faster and operate
+                            smoothly. Whether you are expanding to new markets or managing daily shipments, our platform
+                            ensures efficiency, transparency, and control so you can concentrate on what matters most —
+                            growing your business.</p>
+                    </div>
+                </div>
+                <!-- Box 3 -->
+                <div class="col-lg-6">
+                    <div class="growth-card">
+                        <span class="badge bg-soft-primary mb-3">Confidence & Trust</span>
+                        <h3 class="h4 fw-bold mb-3 text-dark">Your Trusted Logistics Partner</h3>
+                        <p class="text-muted mb-0">At MoveIntra, we deliver more than transportation — we deliver
+                            confidence. Our integrated logistics solutions are designed to streamline shipping, reduce
+                            operational challenges, and enable sustainable growth. With dependable service and smart
+                            tools, we support your journey from local operations to nationwide expansion.</p>
+                    </div>
+                </div>
+                <!-- Box 4 -->
+                <div class="col-lg-6">
+                    <div class="growth-card">
+                        <span class="badge bg-soft-primary mb-3">Tech-Driven Growth</span>
+                        <h3 class="h4 fw-bold mb-3 text-dark">Simplifying Logistics. Enabling Growth.</h3>
+                        <p class="text-muted mb-0">MoveIntra brings together technology and logistics expertise to help
+                            businesses manage shipments efficiently and scale without friction. By optimizing workflows
+                            and ensuring reliable delivery, we empower you to expand your reach and achieve your growth
+                            ambitions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Holographic Section -->
+    <section class="creative-logistics-section">
+        <!-- Background Grid -->
+        <div class="hex-grid"></div>
+
+        <!-- Scanning Beam -->
+        <div class="scan-beam"></div>
+
+        <!-- Central Holographic Globe -->
+        <div class="holo-globe">
+            <div class="globe-ring ring-1"></div>
+            <div class="globe-ring ring-2"></div>
+            <div class="globe-ring ring-3"></div>
+            <div class="globe-ring ring-core"></div>
+        </div>
+
+        <!-- Linear Transit Assets (Start to End) -->
+        <div class="transit-path">
+            <div class="transit-item transit-plane">
+                <i class="fas fa-plane"></i>
+            </div>
+
+            <div class="transit-item transit-truck">
+                <i class="fas fa-truck"></i>
+            </div>
+
+            <div class="transit-item transit-ship">
+                <i class="fas fa-ship"></i>
+            </div>
+        </div>
+
+        <!-- Floating HUD Stats -->
+        <div class="hud-stat hud-1">
+            <div class="fw-bold text-primary mb-1">RELIABLE NETWORK</div>
+            <div class="small"><i class="fas fa-globe-asia me-1"></i> Nationwide Coverage</div>
+        </div>
+
+        <div class="hud-stat hud-2">
+            <div class="fw-bold text-primary mb-1">SMART ROUTING</div>
+            <div class="small"><i class="fas fa-route me-1"></i> AI-Optimized Paths</div>
+        </div>
+
+        <div class="hud-stat hud-3">
+            <div class="fw-bold text-primary mb-1">FAST DELIVERY</div>
+            <div class="small"><i class="fas fa-shipping-fast me-1"></i> Secure & On-Time</div>
+        </div>
+
+        <div class="hud-stat hud-4">
+            <div class="fw-bold text-primary mb-1">24/7 SUPPORT</div>
+            <div class="small"><i class="fas fa-headset me-1"></i> Real-Time Tracking</div>
+        </div>
+
+    </section>
+    <section class="cta-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="cta-card text-center p-5 position-relative overflow-hidden text-white rounded-5"
+                style="border-width: 1px !important;">
+
+                <!-- Background Decorations -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden rounded-5">
+                    <div class="position-absolute top-50 start-50 translate-middle"
+                        style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(235,115,0,0.15) 0%, rgba(0,0,0,0) 70%); pointer-events: none;">
+                    </div>
+                    <i class="fas fa-globe-americas position-absolute text-white opacity-10 fa-10x"
+                        style="top: -50px; left: -50px; opacity: 0.05;"></i>
+                    <i class="fas fa-rocket position-absolute text-white opacity-10 fa-8x"
+                        style="bottom: -30px; right: -30px; opacity: 0.05; transform: rotate(-45deg);"></i>
+                </div>
+
+                <div class="position-relative z-index-1 py-4">
+                    <span
+                        class="badge bg-soft-primary text-primary mb-3 px-3 py-2 rounded-pill fw-bold letter-spacing-1">READY
+                        TO SCALE?</span>
+                    <h2 class="display-4 fw-bold mb-4">Start Shipping Instantly</h2>
+                    <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px; font-weight: 300;">
+                        Join 10,000+ businesses using MoveIntra. Seamless aggregation, lowest rates, and real-time
+                        tracking—all in one dashboard.
+                    </p>
+
+                    <div class="d-flex justify-content-center align-items-center flex-wrap gap-3">
+                        <a href="signup.html"
+                            class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg d-flex align-items-center gap-2">
+                            <span>Sign Up Now</span>
+                            <i class="fas fa-arrow-right small"></i>
+                        </a>
+                        <span class="mx-2 text-white opacity-50 h4 mb-0">|</span>
+                        <a href="#contact"
+                            class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill d-flex align-items-center gap-2">
+                            <i class="fas fa-headset small"></i>
+                            <span>Contact Sales</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <!-- Footer Divider Line -->
+            <hr class="footer-divider mb-5">
+
+            <div class="row g-4 mb-5">
+                <!-- Column 1: Brand & Socials -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                            <i class="fas fa-shipping-fast text-primary fa-2x"></i>
+                            <span class="h3 fw-bold mb-0 footer-logo-text">MoveIntra</span>
+                        </a>
+                    </div>
+
+                    <div class="d-flex gap-2 mb-4">
+                        <a href="#" class="social-icon-circle social-fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/MoveIntra" class="social-icon-circle social-tw"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-circle social-insta"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@MoveIntra" class="social-icon-circle social-yt"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon-circle social-li"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+
+                    <p class="text-muted small mb-0">India's smart logistics aggregator, simplifying shipping for
+                        businesses everywhere.</p>
+                </div>
+
+                <!---href Pending-->
+
+                <!-- Column 2: Company -->
+                <div class="col-6 col-lg-2">
+                    <h5 class="section-title mb-4">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">About Us</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Our Story / Mission</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Careers</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Company News / Updates</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2">
+                    <h5 class="section-title mb-4">Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Domestic Shipping</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">International Shipping</a>
+                        </li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">FTL / LTL Transport</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Air & Sea Freight</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Warehousing /
+                                Fulfillment</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Enterprise Solutions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Resources -->
+                <div class="col-6 col-lg-2">
+                    <h5 class="section-title mb-4">Resources</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Blog / Insights</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">FAQs</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Shipping Guide</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Help Center</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#">Track Shipment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact / Support -->
+                <div class="col-6 col-lg-3">
+                    <h5 class="section-title mb-4">Contact / Support
+
+                    </h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a href="#contact">Contact Us</a></li>
+                        <li><i class="fas fa-envelope footer-list-icon"></i> <a
+                                href="mailto:support@moveintra.in">support@moveintra.in</a></li>
+                        <li><i class="fas fa-angle-right footer-list-icon"></i> <a
+                                href="mailto:contact@moveintra.in">contact@moveintra.in</a></li>
+                    </ul>
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span class="text-white fw-bold">+91 9354950448</span>
+                        </div>
+                        <h2 class="section-title mt-4 display-5">MoveIntra</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

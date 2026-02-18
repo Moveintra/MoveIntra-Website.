@@ -1,0 +1,298 @@
+/* Creative 3D Logistics Animation */
+.creative-logistics-section {
+    position: relative;
+    height: 500px;
+    background: #001845;
+    background: radial-gradient(circle at center, #002865 0%, #001845 100%);
+    overflow: hidden;
+    perspective: 1000px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Background Hex Grid */
+.hex-grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg) translateY(100px) translateZ(-200px);
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(100px) translateZ(-200px);
+    }
+
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(150px) translateZ(-200px);
+    }
+}
+
+/* Central Holographic Globe */
+.holo-globe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+}
+
+.globe-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(235, 115, 0, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(235, 115, 0, 0.2);
+}
+
+.ring-1 {
+    width: 300px;
+    height: 300px;
+    animation: rotateRing1 10s linear infinite;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.ring-2 {
+    width: 260px;
+    height: 260px;
+    animation: rotateRing2 15s linear infinite reverse;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-width: 2px;
+}
+
+.ring-3 {
+    width: 220px;
+    height: 220px;
+    animation: rotateRing1 8s linear infinite;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.ring-core {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(235, 115, 0, 0.8) 0%, transparent 70%);
+    animation: pulseCore 3s ease-in-out infinite;
+}
+
+@keyframes rotateRing1 {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg) rotateX(60deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateX(60deg);
+    }
+}
+
+@keyframes rotateRing2 {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg) rotateY(45deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(45deg);
+    }
+}
+
+@keyframes pulseCore {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+/* Linear Transit Assets (Start to End Movement) */
+.transit-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.transit-item {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #001845;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(235, 115, 0, 0.4);
+    /* Glow effect */
+    z-index: 20;
+    font-size: 1.2rem;
+}
+
+/* Specific Vehicles */
+.transit-truck {
+    top: 65%;
+    left: -60px;
+    animation: travelRight 10s linear infinite;
+}
+
+.transit-plane {
+    top: 25%;
+    left: -60px;
+    animation: travelDiagonal 14s linear infinite;
+    animation-delay: 2s;
+}
+
+.transit-ship {
+    top: 80%;
+    left: -60px;
+    animation: travelRight 18s linear infinite;
+    animation-delay: 5s;
+}
+
+@keyframes travelRight {
+    0% {
+        left: -60px;
+        transform: translateX(0) scale(0.8);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+    100% {
+        left: 100%;
+        transform: translateX(60px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes travelDiagonal {
+    0% {
+        left: -60px;
+        top: 60%;
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        left: 100%;
+        top: 20%;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Floating Data HUDs */
+.hud-stat {
+    position: absolute;
+    padding: 10px 20px;
+    background: rgba(0, 24, 69, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 3px solid var(--primary-color);
+    color: #fff;
+    font-family: monospace;
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.hud-1 {
+    top: 15%;
+    left: 8%;
+    animation: floatHud 4s ease-in-out infinite;
+}
+
+.hud-2 {
+    top: 15%;
+    right: 8%;
+    animation: floatHud 5s ease-in-out infinite 1s;
+}
+
+.hud-3 {
+    bottom: 15%;
+    left: 8%;
+    animation: floatHud 6s ease-in-out infinite 2s;
+}
+
+.hud-4 {
+    bottom: 15%;
+    right: 8%;
+    animation: floatHud 5s ease-in-out infinite 0.5s;
+}
+
+@keyframes floatHud {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scanning Beam */
+.scan-beam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    opacity: 0.5;
+    box-shadow: 0 0 20px var(--primary-color);
+    animation: scanDown 4s linear infinite;
+}
+
+@keyframes scanDown {
+    0% {
+        top: -10%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.5;
+    }
+
+    90% {
+        opacity: 0.5;
+    }
+
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
