@@ -10,7 +10,7 @@
     /* Pure White */
     --text-muted: #e2e8f0;
     /* Very Light Gray/Blue */
-    --font-outfit: 'Poppins', sans-serif;
+    --font-outfit: 'Montserrat', sans-serif;
     --bg-canvas: #001845;
 }
 
@@ -20,6 +20,8 @@ body {
     background-color: var(--bg-canvas);
     overflow-x: hidden;
 }
+
+
 
 .text-muted {
     color: var(--text-muted) !important;
@@ -207,6 +209,66 @@ body {
 
 .nav-link:hover {
     color: var(--primary-color) !important;
+}
+
+/* Dropdown Menu Customization */
+.dropdown-menu {
+    background: rgba(0, 24, 69, 0.95) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 15px !important;
+    padding: 1rem 0 !important;
+    margin-top: 10px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dropdown-item {
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.7rem 1.5rem !important;
+}
+
+.dropdown-item:hover {
+    background: rgba(235, 115, 0, 0.1) !important;
+    color: var(--primary-color) !important;
+    transform: translateX(5px);
+}
+
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.navbar-nav .dropdown-toggle::after {
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    border-top: 0.35em solid;
+    border-right: 0.35em solid transparent;
+    border-left: 0.35em solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeInDown 0.3s ease forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Feature Cards */
@@ -722,6 +784,9 @@ body {
     .orbit-wrapper {
         height: auto;
         padding: 3rem 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .orbit-path {
@@ -729,7 +794,10 @@ body {
     }
 
     .orbit-center {
-        margin-bottom: 2rem;
+        width: 240px;
+        height: 240px;
+        margin: 0 auto 3rem auto;
+        flex-shrink: 0;
     }
 
     .orbiting-grid {
