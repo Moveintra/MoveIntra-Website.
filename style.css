@@ -840,6 +840,152 @@ body {
 }
 
 /* Dashboard Styles */
+/* Light Mode Theme (Specific to Domestic Page) */
+.light-mode {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+}
+
+.light-mode .text-dark {
+    color: #0f172a !important;
+}
+
+.light-mode .text-muted {
+    color: #64748b !important;
+}
+
+.light-mode .glass-navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.light-mode .nav-link,
+.light-mode .navbar-brand.logo {
+    color: #1e293b !important;
+}
+
+.light-mode .dropdown-menu {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode .dropdown-item {
+    color: #334155 !important;
+}
+
+.light-mode .dropdown-item:hover {
+    background: #fff7ed !important;
+}
+
+.light-mode .hero-section {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(235, 115, 0, 0.03), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(15, 23, 42, 0.02), transparent 40%);
+    padding-top: 160px;
+}
+
+.light-mode .hero-section h1 {
+    color: #0f172a !important;
+}
+
+.light-mode .hero-section p.lead {
+    color: #475569 !important;
+}
+
+.light-mode .btn-outline-light {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #475569 !important;
+}
+
+.light-mode .btn-outline-light:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.light-mode .feature-card {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
+}
+
+.light-mode .feature-card h3 {
+    color: #0f172a !important;
+}
+
+.light-mode .feature-card p {
+    color: #64748b !important;
+}
+
+.light-mode .feature-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(235, 115, 0, 0.2);
+    box-shadow: 0 20px 50px rgba(235, 115, 0, 0.08) !important;
+}
+
+.light-mode .icon-wrapper {
+    background: #fff7ed;
+    border: none;
+}
+
+.light-mode section.py-5.bg-dark {
+    background: #f8fafc !important;
+}
+
+.light-mode section.py-5.bg-dark .text-white {
+    color: #64748b !important;
+}
+
+.light-mode .cta-card {
+    background: #0f172a !important;
+}
+
+.light-mode footer.footer {
+    background: #001845 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Maintain the premium orange gradients even in light mode for the footer */
+.light-mode footer.footer .section-title,
+.light-mode footer.footer .footer-logo-text {
+    background: linear-gradient(90deg, #EB7300, #ffc480, #ffffff) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.light-mode footer.footer .footer-links a,
+.light-mode footer.footer p.text-muted {
+    color: #cbd5e1 !important;
+}
+
+.light-mode footer.footer .footer-links a:hover {
+    color: #EB7300 !important;
+}
+
+.light-mode footer.footer .footer-divider {
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure social icons remain visible on dark background */
+.light-mode footer.footer .social-icon-circle {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.light-mode footer.footer .social-icon-circle:hover {
+    background: #EB7300 !important;
+    border-color: #EB7300 !important;
+}
+
+.light-mode footer.footer .text-white {
+    color: #ffffff !important;
+}
+
 .dashboard-container {
     display: flex;
     min-height: 100vh;
